@@ -7,8 +7,7 @@ const router = jsonServer.router(path.join(__dirname, "db.json"));
 const middlewares = jsonServer.defaults();
 
 const corsOptions = {
-  origin: "http://localhost:3000", // Allow requests from this specific origin
-  optionsSuccessStatus: 200, // Return 200 for preflight requests
+  origin: "*", // Allow requests from this specific origin
 };
 
 server.use(cors(corsOptions));
